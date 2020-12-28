@@ -17,3 +17,7 @@ class InputReader:
     @staticmethod
     def fetch_numbers():
         return [int(value) for value in InputReader.fetch_input_lines()]
+
+    @staticmethod
+    def fetch_number():
+        return InputerReader.fetch_numbers()[0]
