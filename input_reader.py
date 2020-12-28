@@ -1,17 +1,18 @@
 class InputReader:
     @staticmethod
-    def fetch_input_lines():
+    def fetch_input():
         data = ""
         with open('input.txt', 'r') as file:
             data = file.read()
-        return data.split("\n")
+        return data
+
+    @staticmethod
+    def fetch_input_lines():
+        return InputReader.fetch_input().split("\n")
 
     @staticmethod
     def fetch_input_seperated_by_empty_lines():
-        data = ""
-        with open("input.txt", "r") as file:
-            data = file.read()
-        return data.split("\n\n")
+        return InputReader.fetch_input().split("\n\n")
 
     @staticmethod
     def fetch_numbers():
